@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改</title>
+</head>
+<body>
+
+<form action="/notes/mod/{{ note.id }}" method="post">
+    主题：<input type="text" name="title" value="{{ note.title }}">
+    <input type="submit" value="保存">
+    <a href="/notes/">返回列表页</a>
+    <br>
+    <div  style="width=400px;height=400px">
+        <textarea name="content">{{ note.content }}</textarea>
+    </div>
+</form>
+
+</body>
+</html>

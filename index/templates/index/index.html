@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+    {% if login %}
+    <p>
+        欢迎：{{ username }}
+        <a href="/user/logout">退出登录</a>
+    </p>
+    <p>
+        <a href="/notes/">进入我的笔记</a>
+    </p>
+    {% else %}
+    <a href="/user/login">登录</a>
+    <a href="/user/reg">注册</a>
+    {% endif %}
+
+</body>
+</html>
